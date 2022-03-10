@@ -2,13 +2,10 @@ package edu.eci.ieti.data;
 
 import edu.eci.ieti.dto.TaskDto;
 import edu.eci.ieti.enums.Status;
-import jdk.vm.ci.meta.Local;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 @Document(collection = "tasks")
 public class Tasks {
