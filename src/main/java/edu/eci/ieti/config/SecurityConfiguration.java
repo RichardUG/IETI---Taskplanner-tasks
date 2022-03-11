@@ -24,9 +24,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
-                .antMatchers( HttpMethod.GET, "/v1/tasks" ).permitAll()
-                .antMatchers( HttpMethod.POST,"/v1/tasks" ).permitAll()
-                .antMatchers( HttpMethod.PUT, "/v1/tasks" ).permitAll()
+                .antMatchers( HttpMethod.GET, "http://taskplannertasks.herokuapp.com/v1/tasks" ).permitAll()
+                .antMatchers( HttpMethod.POST,"http://taskplannertasks.herokuapp.com/v1/tasks" ).permitAll()
+                .antMatchers( HttpMethod.PUT, "http://taskplannertasks.herokuapp.com/v1/tasks" ).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS );
